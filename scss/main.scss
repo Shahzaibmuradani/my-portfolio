@@ -74,6 +74,7 @@ main {
   }
 }
 
+// about us
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -108,7 +109,7 @@ main {
 
   .job {
     background: lighten($color: $primary-color, $amount: 5);
-    padding: 0.5rem;
+    padding: 1.5rem;
     border-bottom: $secondary-color 5px solid;
   }
 }
@@ -158,23 +159,33 @@ main {
 }
 
 // Button Styles
-.btn {
+// .btn {
+//   display: block;
+//   padding: 0.5rem 1rem;
+//   border: 0;
+//   margin-bottom: 0.3rem;
+
+//   &:hover {
+//     background: $secondary-color;
+//     color: set-text-color($secondary-color);
+//   }
+// }
+
+.btn-light {
+  // @extend .btn;
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
+  font-weight: bold;
+  text-align: center;
+  background: lighten($color: $primary-color, $amount: 50);
+  color: #333;
 
   &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
   }
-}
-
-.btn-light {
-  @extend .btn;
-  font-weight: bold;
-  background: lighten($color: $primary-color, $amount: 50);
-  color: #333;
 }
 
 #main-footer {
