@@ -57,10 +57,10 @@ main {
 
     a {
       padding: 0.4rem;
+      @include easeOut;
 
       &:hover {
         color: $secondary-color;
-        @include easeOut;
       }
     }
   }
@@ -172,14 +172,9 @@ main {
 
 .btn-light {
   @extend .btn;
+  font-weight: bold;
   background: lighten($color: $primary-color, $amount: 50);
   color: #333;
-}
-
-.btn-dark {
-  @extend .btn;
-  background: darken($color: $primary-color, $amount: 50);
-  color: #fff;
 }
 
 #main-footer {

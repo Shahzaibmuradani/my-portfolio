@@ -148,10 +148,10 @@ main {
   main .icons {
     margin-top: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      transition: all 0.5s ease-out; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.5s ease-out; }
+        color: #eece1a; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -212,22 +212,19 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-light, .btn-dark {
+.btn, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-light:hover, .btn-dark:hover {
+  .btn:hover, .btn-light:hover {
     background: #eece1a;
     color: #000; }
 
 .btn-light {
+  font-weight: bold;
   background: #c4c4c4;
   color: #333; }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
 
 #main-footer {
   text-align: center;
@@ -277,7 +274,12 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
     grid-template-columns: 1fr; } }
