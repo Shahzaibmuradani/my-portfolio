@@ -31,3 +31,23 @@ function toogleMenu() {
     showMenu = false;
   }
 }
+
+// Variable to store the last scroll position
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+  // Get current scroll position
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down - hide menu button
+    menuBtn.style.display = 'none';
+  }
+  
+  // Always show when at top of page
+  if (scrollTop === 0) {
+    menuBtn.style.display = 'block';
+  }
+  
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}, false);
